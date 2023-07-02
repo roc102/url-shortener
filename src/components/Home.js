@@ -4,14 +4,13 @@ import axios from "axios";
 const App = () => {
   const [shortenedUrl, setShortenedUrl] = useState("");
   const [longUrl, setLongUrl] = useState("");
-  const clientId = "2c3926e3bed6e6347d28ba50e18608ad22d7da4b";
-  const clientSecret = "72b1e87d3e883afe12a9560d283791e4baa299ee";
+  const clientId = "e458912a4572ded218b36e87ad9c8e738e39c454";
+  const clientSecret = "624e1a94b210f615128d70305a2407aa3489ffdc";
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     try {
-      // Obtain an access token
       const tokenResponse = await axios.post(
         "https://api-ssl.bitly.com/oauth/access_token",
         {
