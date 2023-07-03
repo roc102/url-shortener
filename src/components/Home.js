@@ -45,11 +45,11 @@ const App = () => {
   };
 
   return (
-    <section className="bg-gradient-to-r from-red-400 to-indigo-500">
-      <h1 className="font-extrabold text-5xl text-blue-500 tracking-tight text-shadow text-center mt-8 pt-4">
+    <section>
+      <h1 className=" font-extrabold text-5xl text-blue-500 tracking-tight text-shadow text-center mt-8 pt-4">
         Short URL
       </h1>
-      <div className="max-w-3xl mx-auto shadow-lg rounded-md bg-white mt-8 pt-4 p-6 text-center">
+      <div className="bg-gradient-to-r from-red-400 to-indigo-500 max-w-3xl mx-auto shadow-lg rounded-md bg-white mt-8 pt-4 p-6 text-center">
         <h1 className="text-3xl font-bold mb-6">Paste the URL to be shortened</h1>
         <form onSubmit={handleSubmit}>
           <div className="mb-4 flex">
