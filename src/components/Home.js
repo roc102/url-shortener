@@ -45,7 +45,7 @@ const App = () => {
   };
 
   return (
-    <section>
+    <section className="bg-gradient-to-r from-red-400 to-indigo-500">
       <h1 className="font-extrabold text-5xl text-blue-500 tracking-tight text-shadow text-center mt-8 pt-4">
         Short URL
       </h1>
