@@ -4,8 +4,8 @@ import axios from "axios";
 const App = () => {
   const [shortenedUrl, setShortenedUrl] = useState("");
   const [longUrl, setLongUrl] = useState("");
-  const clientId = "YOUR_BITLY_CLIENT_ID";
-  const clientSecret = "YOUR_BITLY_CLIENT_SECRET";
+  const clientId = "YOUR_BITLY_CLIENT_ID"; // add you id
+  const clientSecret = "YOUR_BITLY_CLIENT_SECRET";  // add your secret keys
 
   const handleSubmit = async (event) => {
     event.preventDefault();
