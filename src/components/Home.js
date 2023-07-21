@@ -4,8 +4,10 @@ import axios from "axios";
 const App = () => {
   const [shortenedUrl, setShortenedUrl] = useState("");
   const [longUrl, setLongUrl] = useState("");
-  const clientId = "YOUR_BITLY_CLIENT_ID"; // add you id
-  const clientSecret = "YOUR_BITLY_CLIENT_SECRET";  // add your secret keys
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const clientId = "YOUR_BITLY_CLIENT_ID"; // add your ID
+  const clientSecret = "YOUR_BITLY_CLIENT_SECRET"; // add your secret keys
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -38,15 +40,16 @@ const App = () => {
       );
 
       setShortenedUrl(response.data.link);
+      setErrorMessage(""); // Reset the error message on successful response
     } catch (error) {
       console.error(error);
-      // Handle error condition
+      setErrorMessage("Error: Unable to shorten the URL"); // Set error message when there's an issue
     }
   };
 
   return (
     <section>
-      <h1 className=" font-extrabold text-5xl text-blue-500 tracking-tight text-shadow text-center mt-8 pt-4">
+      <h1 className="font-extrabold text-5xl text-blue-500 tracking-tight text-shadow text-center mt-8 pt-4">
         Short URL
       </h1>
       <div className="bg-gradient-to-r from-red-400 to-indigo-500 max-w-3xl mx-auto shadow-lg rounded-md bg-white mt-8 pt-4 p-6 text-center">
@@ -68,6 +71,7 @@ const App = () => {
             />
           </div>
         </form>
+        {errorMessage && <p className="text-red-500">{errorMessage}</p>}
         {shortenedUrl && (
           <p className="text-left mt-4">
             Long URL:{" "}
