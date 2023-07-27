@@ -48,53 +48,56 @@ const App = () => {
   };
 
   return (
-    <section>
+    <section style={{ display: "grid", placeItems: "center", height: "100vh" }}>
       <h1 className="font-extrabold text-5xl text-blue-500 tracking-tight text-shadow text-center mt-8 pt-4">
         Short URL
       </h1>
-      <div className="bg-gradient-to-r from-red-400 to-indigo-500 max-w-3xl mx-auto shadow-lg rounded-md bg-white mt-8 pt-4 p-6 text-center">
+      <div className="bg-gradient-to-r from-red-400 to-indigo-500 max-w-3xl mx-auto shadow-lg rounded-md bg-white mt-8 pt-4 p-6 text-center" style={{ width: "80%", maxWidth: "500px", marginTop: "15vh" }}>
         <h1 className="text-3xl font-bold mb-6">Paste the URL to be shortened</h1>
-        <form onSubmit={handleSubmit}>
-          <div className="mb-4 flex">
-            <input
-              type="text"
-              name="u"
-              placeholder="Enter the link here"
-              className="flex-1 px-4 py-2 border border-gray-300 rounded-l-md mr-0.5"
-              value={longUrl}
-              onChange={(event) => setLongUrl(event.target.value)}
-            />
-            <input
-              type="submit"
-              value="Shorten URL"
-              className="px-6 py-2 bg-blue-500 text-white rounded-r-md shadow-md hover:bg-blue-600 ml-0.5"
-            />
-          </div>
+        <form onSubmit={handleSubmit} style={{ display: "grid", gap: "1rem" }}>
+          <input
+            type="text"
+            name="u"
+            placeholder="Enter the link here"
+            className="px-4 py-2 border border-gray-300 rounded-md"
+            value={longUrl}
+            onChange={(event) => setLongUrl(event.target.value)}
+          />
+          <input
+            type="submit"
+            value="Shorten URL"
+            className="px-6 py-2 bg-blue-500 text-white rounded-md shadow-md hover:bg-blue-600"
+          />
         </form>
         {errorMessage && <p className="text-red-500">{errorMessage}</p>}
         {shortenedUrl && (
-          <p className="text-left mt-4">
-            Long URL:{" "}
-            <a href={shortenedUrl} target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">
-              {longUrl}
-            </a>
-            <br /><br />
-            Shortened URL:{" "}
-            <input
-              type="text"
-              value={shortenedUrl}
-              className="px-4 py-2 border border-gray-300 rounded"
-              readOnly
-            />
-            <br /><br />
-            <a href={`url-total-clicks.php?u=${shortenedUrl}`} className="text-blue-500 underline">
-              Total clicks of your shortened URL
-            </a>
-            <br />
-            <a href="https://www.shorturl.at/" className="text-blue-500 underline">
-              Shorten another URL
-            </a>
-          </p>
+          <div className="text-left mt-4">
+            <p>
+              Long URL:{" "}
+              <a href={longUrl} target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">
+                {longUrl}
+              </a>
+            </p>
+            <p>
+              Shortened URL:{" "}
+              <input
+                type="text"
+                value={shortenedUrl}
+                className="px-4 py-2 border border-gray-300 rounded-md"
+                readOnly
+              />
+            </p>
+            <p>
+              <a href={`url-total-clicks.php?u=${shortenedUrl}`} className="text-blue-500 underline">
+                Total clicks of your shortened URL
+              </a>
+            </p>
+            <p>
+              <a href="https://www.shorturl.at/" className="text-blue-500 underline">
+                Shorten another URL
+              </a>
+            </p>
+          </div>
         )}
       </div>
     </section>
