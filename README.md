@@ -65,7 +65,7 @@ const clientSecret = "YOUR_BITLY_CLIENT_SECRET";
 
 ## Usage
 
-To start the development server and view the Humari Dukaan website, run the following command:
+To start the development server and view the URL Shortener application, run the following command:
 
 ```bash
 npm start
