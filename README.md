@@ -24,4 +24,53 @@ The URL Shortener is a powerful tool designed to simplify and optimize long and 
 
 3. **Copy and Share**: Once the short link is generated, simply copy it to your clipboard. You can now share the concise link on social media, emails, messages, or any platform of your choice.
 
+# Installation and Usage Guide
+
+# Fork the Repository
+
+Click the "Fork" button at the top right corner of the page. This will create a copy of the repository under your GitHub account.
+
+## Installation
+
+To run the URL Shortener Project locally, follow these steps:
+
+1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/url-shortener.git
+```
+
+2. Navigate to the project directory
+
+```bash
+cd url-shortener
+```
+
+3. Install the dependencies using npm
+
+```bash
+npm install
+```
+
+4. Add Bitly API Credentials
+ ```bash
+const clientId = "YOUR_BITLY_CLIENT_ID";
+
+```
+
+ ```bash
+const clientSecret = "YOUR_BITLY_CLIENT_SECRET";
+
+```
+
+## Usage
+
+To start the development server and view the Humari Dukaan website, run the following command:
+
+```bash
+npm start
+```
+
+This will start the URL Shortener application on your computer's local development server, accessible at [http://localhost:3000](http://localhost:3000).
+
 
