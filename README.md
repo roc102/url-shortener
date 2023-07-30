@@ -54,12 +54,12 @@ npm install
 
 4. Add Bitly API Credentials
  ```bash
-const clientId = "YOUR_BITLY_CLIENT_ID";
+const clientId = "YOUR_BITLY_CLIENT_ID"
 
 ```
 
  ```bash
-const clientSecret = "YOUR_BITLY_CLIENT_SECRET";
+const clientSecret = "YOUR_BITLY_CLIENT_SECRET"
 
 ```
 
