@@ -71,4 +71,8 @@ To start the development server and view the Url-Shortener, run the following co
 npm start
 ```
 
+<<<<<<< HEAD
 This will start the URL Shortener application on your computer's local development server, accessible at [http://localhost:3000](http://localhost:3000).
+=======
+This will start the application on your computer's local development server, accessible at [http://localhost:3000](http://localhost:3000).
+>>>>>>> origin/main
